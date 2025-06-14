@@ -1,0 +1,250 @@
+@font-face {
+  font-family: 'GowunBatang-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: #333;
+}
+
+body {
+  font-family: 'SBAggroB', sans-serif;
+}
+
+.wrap {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  background: #71462D;
+  color: #d6d1d1;
+}
+
+section {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu {
+  flex: 1 1 250px;
+  min-width: 200px;
+  background: #B29273;
+  height: auto;
+}
+
+.main {
+  flex: 3 1 600px;
+  min-width: 300px;
+  background: #DFBEA6;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+footer {
+  width: 100%;
+  height: 10vh;
+  background: #3D3022;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  color: #6b5a48;
+  font-size: 20px;
+}
+
+.title {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #333;
+  border-bottom: 1px solid black;
+}
+
+.menus {
+  width: 100%;
+  height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 80px;
+  padding-bottom: 150px;
+}
+
+.menus li {
+  font-size: 25px;
+  text-align: center;
+  position: relative;
+  border-bottom: none;
+}
+
+.menus li::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background-color: #333;
+  transition: width 0.3s ease;
+}
+
+.menus li:hover::after {
+  width: 100%;
+}
+
+.menus li a {
+  color: #333;
+}
+
+.sub-title {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #333;
+}
+
+.calc {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.calc div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+.calc p {
+  color: #242424;
+  font-size: 25px;
+  text-align: center;
+  position: relative;
+  top: -5%;
+}
+
+.calc input {
+  width: 100%;
+  height: 5vh;
+  font-size: 1rem;
+  color: #333;
+  background: none;
+  border: 0px;
+  border-bottom: 1px solid black;
+  padding-left: 1px;
+}
+
+.calc input:focus {
+  outline: none;
+}
+
+.calc input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: inherit !important;
+  background-color: transparent !important;
+  transition: background-color 9999s ease-in-out 0s;
+  font-size: 15px;
+}
+
+.calc label {
+  color: #333;
+  font-size: 20px;
+}
+
+.result {
+  max-width: 400px;
+  width: 100%;
+  margin: 40px auto 0;
+  padding: 10px;
+}
+
+.result .sub-title p {
+  font-size: 30px;
+}
+
+.result p {
+  font-size: 20px;
+  text-align: left;
+}
+
+/* ✅ 반응형 대응 */
+@media (max-width: 768px) {
+  .wrap {
+    font-size: 90%;
+  }
+
+  header,
+  footer {
+    font-size: 1.2rem;
+    height: auto;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .menu {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .menus {
+    gap: 30px;
+    padding-bottom: 30px;
+  }
+
+  .main {
+    width: 100%;
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .sub-title {
+    font-size: 1.2rem;
+    height: auto;
+  }
+
+  .calc,
+  .result {
+    position: static;
+    width: 100%;
+    max-width: none;
+  }
+
+  .result {
+    margin-top: 20px;
+  }
+}
